@@ -21,6 +21,31 @@ Css
 jsx
 Api
 
+
+## Project Structure
+
+weather-dashboard/
+├── public/
+├── src/
+│   ├── Components/
+│   │   ├── Sidebar/
+│   │   │   ├── Sidebar.js
+│   │   │   ├── Sidebar.css
+│   ├── Pages/
+│   │   ├── Dashboard/
+│   │   │   ├── Dashboard.js
+│   │   │   ├── Dashboard.css
+│   │   ├── Single_Page/
+│   │       ├── SinglePage.js
+│   ├── Apis/
+│   │   ├── Slice/
+│   │       ├── Data.js
+│   ├── App.js
+│   ├── index.js
+├── package.json
+├── README.md
+
+
 ## Installation
 
 To get started with the project, clone the repository and install the required dependencies:
