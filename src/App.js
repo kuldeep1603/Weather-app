@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import Navbar from './Components/Navbar/Navbar';
+import Dashboard from './Page/Dashboard/Dashboard';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Fav from './Page/FavCity/Fav';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/Favourite' element={<Fav />} />
+          <Route path='*' element="Page Not Found ...!" />
+        </Routes>
+        <ToastContainer />
+      </BrowserRouter>
+    </>
   );
 }
 
